@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Taarruni Design Solutions – Web Development Company in Bangalore</title>
+<meta name="description" content="Taarruni Design Solutions (TDS) is a leading multimedia, web solutions and SEM company in India. Incorporated 2005, Bangalore.">
+<style>
+:root{color-scheme:dark;--bg:#07060f;--bg2:#0f0d1f;--card:rgba(255,255,255,.05);--bd:rgba(255,255,255,.12);--tx:#f1f0fa;--mu:#a09cc0;--a:#8b5cf6;--b:#22d3ee;--c:#f472b6;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--tx);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.grad{background:linear-gradient(90deg,var(--a),var(--b),var(--c));-webkit-background-clip:text;background-clip:text;color:transparent}
+#bg{position:fixed;inset:0;z-index:0;pointer-events:none}
+main,header,footer{position:relative;z-index:1}
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:14px 5vw;backdrop-filter:blur(14px);background:rgba(7,6,15,.6);border-bottom:1px solid var(--bd)}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.3rem;letter-spacing:.5px;line-height:1}.logo svg{width:38px;height:38px;flex:none;filter:drop-shadow(0 0 12px rgba(139,92,246,.6))}.logo small{display:block;font-size:.55rem;letter-spacing:2.6px;color:var(--mu);font-weight:600;margin-top:4px}
+nav ul{display:flex;gap:26px;list-style:none;padding:0}
+nav ul a{font-size:.92rem;color:var(--mu);transition:.2s}nav ul a:hover{color:#fff}
+.btn{display:inline-block;padding:12px 26px;border-radius:99px;background:linear-gradient(135deg,var(--a),var(--b));color:#fff;font-weight:600;border:0;cursor:pointer;font-size:.95rem;box-shadow:0 10px 30px -8px var(--a);transition:.25s}
+.btn:hover{transform:translateY(-3px) scale(1.03)}
+.btn.o{background:transparent;border:1px solid var(--bd);box-shadow:none}
+#burger{display:none;background:none;border:0;color:#fff;font-size:1.7rem;cursor:pointer}
+section{padding:100px 5vw;max-width:1240px;margin:auto}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding-top:120px}
+.tag{display:inline-block;padding:6px 16px;border:1px solid var(--bd);border-radius:99px;font-size:.8rem;color:var(--b);background:var(--card);width:fit-content}
+h1{font-size:clamp(2.4rem,7vw,5.4rem);line-height:1.05;margin:22px 0;font-weight:800;max-width:880px}
+.sub{color:var(--mu);font-size:clamp(1rem,2vw,1.25rem);max-width:600px;margin-bottom:34px}
+.row{display:flex;gap:14px;flex-wrap:wrap}
+h2{font-size:clamp(1.9rem,4.5vw,3.2rem);font-weight:800;line-height:1.15;margin:10px 0 18px}
+.eyebrow{color:var(--b);font-size:.82rem;letter-spacing:3px;text-transform:uppercase}
+.marq{overflow:hidden;border-block:1px solid var(--bd);background:rgba(255,255,255,.02);padding:18px 0;position:relative;z-index:1}
+.track{display:flex;gap:46px;width:max-content;animation:mq 45s linear infinite}
+.track span{color:var(--mu);font-weight:700;font-size:1.05rem;white-space:nowrap;opacity:.8}
+.marq:hover .track{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+.grid{display:grid;gap:26px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}
+.tilt{perspective:900px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:22px;padding:34px;backdrop-filter:blur(10px);transform-style:preserve-3d;transition:transform .15s ease-out,border-color .3s;position:relative;overflow:hidden}
+.card:hover{border-color:var(--a)}
+.card::after{content:"";position:absolute;inset:0;background:radial-gradient(400px circle at var(--mx,50%) var(--my,0%),rgba(139,92,246,.22),transparent 60%);pointer-events:none}
+.card>*{transform:translateZ(30px)}
+.ic{width:62px;height:62px;border-radius:18px;display:grid;place-items:center;font-size:1.8rem;background:linear-gradient(135deg,var(--a),var(--b));margin-bottom:20px}
+.card h3{font-size:1.4rem;margin-bottom:8px}.card p,.card li{color:var(--mu);font-size:.96rem}
+.card ul{padding-left:18px;margin-top:12px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+.stat{text-align:center;padding:24px 10px;border:1px solid var(--bd);border-radius:18px;background:var(--card)}
+.stat b{display:block;font-size:2.2rem}.stat span{color:var(--mu);font-size:.85rem}
+.about{display:grid;grid-template-columns:1.1fr 1fr;gap:50px;align-items:center}
+.cube-wrap{perspective:900px;height:300px;display:grid;place-items:center}
+.cube{width:150px;height:150px;position:relative;transform-style:preserve-3d;animation:spin 14s linear infinite}
+.cube div{position:absolute;inset:0;display:grid;place-items:center;font-weight:700;font-size:.95rem;text-align:center;border:1px solid var(--bd);background:linear-gradient(135deg,rgba(139,92,246,.35),rgba(34,211,238,.2));backdrop-filter:blur(4px);border-radius:14px}
+.cube div:nth-child(1){transform:translateZ(75px)}.cube div:nth-child(2){transform:rotateY(90deg) translateZ(75px)}.cube div:nth-child(3){transform:rotateY(180deg) translateZ(75px)}.cube div:nth-child(4){transform:rotateY(-90deg) translateZ(75px)}.cube div:nth-child(5){transform:rotateX(90deg) translateZ(75px)}.cube div:nth-child(6){transform:rotateX(-90deg) translateZ(75px)}
+@keyframes spin{to{transform:rotateX(360deg) rotateY(360deg)}}
+.pf{aspect-ratio:4/3;display:flex;align-items:flex-end;padding:22px;border-radius:22px;border:1px solid var(--bd);position:relative;overflow:hidden;transform-style:preserve-3d;transition:transform .15s ease-out}
+.pf::before{content:"";position:absolute;inset:0;background:var(--g);opacity:.85}
+.pf::after{content:"";position:absolute;width:140%;height:140%;left:-20%;top:-20%;background:radial-gradient(circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.28),transparent 45%)}
+.pf span{position:relative;z-index:2;font-weight:700;transform:translateZ(40px);background:rgba(0,0,0,.4);padding:6px 14px;border-radius:99px;font-size:.85rem}
+.pf i{position:absolute;right:18px;top:12px;font-style:normal;font-size:3rem;z-index:2;transform:translateZ(60px);opacity:.9}
+.tw{perspective:1200px;height:420px;position:relative;margin-top:30px}
+.tc{position:absolute;left:50%;top:0;width:min(560px,88vw);margin-left:calc(min(560px,88vw)/-2);transition:transform .7s cubic-bezier(.2,.8,.2,1),opacity .7s;height:100%}
+.tc .card{height:100%;overflow:auto;display:flex;flex-direction:column;justify-content:center}
+.tc q{font-size:1.02rem;color:var(--tx);quotes:none;line-height:1.7}
+.who{margin-top:18px;display:flex;gap:12px;align-items:center}
+.av{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-weight:700;background:linear-gradient(135deg,var(--c),var(--a))}
+.who small{color:var(--mu);display:block}
+.ctl{display:flex;gap:12px;justify-content:center;margin-top:20px}
+.ctl button{width:48px;height:48px;border-radius:50%;border:1px solid var(--bd);background:var(--card);color:#fff;font-size:1.2rem;cursor:pointer}
+form{display:grid;gap:14px}
+input,select,textarea{width:100%;padding:14px 16px;border-radius:14px;border:1px solid var(--bd);background:rgba(255,255,255,.06);color:#fff;font:inherit}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--a)}
+select option{color:#000}
+.cinfo p{margin-bottom:16px;color:var(--mu)}.cinfo b{color:var(--tx);display:block}
+footer{border-top:1px solid var(--bd);padding:50px 5vw 30px;background:var(--bg2)}
+.fg{max-width:1240px;margin:auto;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:34px}
+footer h4{margin-bottom:12px}footer li{list-style:none;color:var(--mu);margin-bottom:6px;font-size:.92rem}footer ul{padding:0}footer p{color:var(--mu);font-size:.92rem}
+.copy{text-align:center;color:var(--mu);font-size:.82rem;margin-top:34px}
+.wa{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:60;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;font-size:1.7rem;box-shadow:0 10px 30px rgba(37,211,102,.5);animation:pu 2s infinite}
+@keyframes pu{50%{transform:scale(1.1)}}
+.rv{opacity:0;transform:translateY(40px);transition:1s cubic-bezier(.2,.8,.2,1)}.rv.in{opacity:1;transform:none}
+@media(max-width:860px){
+ nav ul{position:fixed;top:60px;left:0;right:0;flex-direction:column;background:rgba(7,6,15,.97);padding:20px 5vw;gap:16px;transform:translateY(-130%);transition:.3s;border-bottom:1px solid var(--bd)}
+ nav ul.open{transform:none}#burger{display:block}nav .btn.d{display:none}
+ .g2,.g3,.about,.fg{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}
+ section{padding:70px 5vw}.tw{height:460px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<canvas id="bg"></canvas>
+<nav>
+ <a href="#home" class="logo" aria-label="Taarruni Design Solutions"><svg viewBox="0 0 40 40"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs><rect x="2" y="2" width="36" height="36" rx="10" fill="url(#lg)"/><path d="M10 12h20v4.5H22V30h-4.5V16.5H10z" fill="#fff"/></svg><span>taarruni<small>DESIGN SOLUTIONS</small></span></a>
+ <ul id="menu">
+  <li><a href="#about">About Us</a></li><li><a href="#services">Services</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#clients">Clients</a></li><li><a href="#testimonials">Testimonials</a></li><li><a href="#contact">Contact Us</a></li>
+ </ul>
+ <a href="#contact" class="btn d">Request Quote</a>
+ <button id="burger" aria-label="Menu">☰</button>
+</nav>
+
+<header class="hero" id="home" style="max-width:1240px;margin:auto;padding-left:5vw;padding-right:5vw">
+ <span class="tag">● A leading Digital Marketing and IT Solutions company</span>
+ <h1>Web Design Company in <span class="grad">Bangalore</span> — crafting digital experiences.</h1>
+ <p class="sub">Taarruni Design Solutions (TDS) is a leading multimedia and web solutions provider. Marketing Solutions and IT Solutions are what we are known for.</p>
+ <div class="row"><a href="#contact" class="btn">Request Quote</a><a href="#portfolio" class="btn o">View Portfolio</a></div>
+</header>
+
+<div class="marq" id="clients"><div class="track" id="trk"></div></div>
+
+<main>
+<section id="about" class="about">
+ <div class="rv">
+  <div class="eyebrow">Who we are</div>
+  <h2>Multimedia & web solutions since <span class="grad">2005</span></h2>
+  <p style="color:var(--mu)">Taarruni Design Solutions (TDS) is a leading Multimedia and web solutions provider. Incorporated in 2005 at Bangalore, India, the company is a prominent brand known for delivering an array of services in designing and development: web designing, multimedia development services (2D/3D animation), web application development, Flash programming, E-Commerce programming services, SEO (Search Engine Optimization), SEM (Search Engine Marketing) and print media.</p>
+  <div class="stats">
+   <div class="stat"><b class="grad" data-n="2005" data-f="1">0</b><span>Incorporated</span></div>
+   <div class="stat"><b class="grad" data-n="45" data-s="+">0</b><span>Client brands</span></div>
+   <div class="stat"><b class="grad" data-n="2" data-s="">0</b><span>Offices: India & USA</span></div>
+   <div class="stat"><b class="grad" data-n="8" data-s="">0</b><span>Client testimonials</span></div>
+  </div>
+ </div>
+ <div class="cube-wrap rv"><div class="cube"><div>Web Design</div><div>SEO / SEM</div><div>3D Animation</div><div>E-Commerce</div><div>CMS</div><div>Print Media</div></div></div>
+</section>
+
+<section id="services">
+ <div class="eyebrow">What we do</div>
+ <h2>Services <span class="grad">we are known for</span></h2>
+ <div class="grid g2" style="margin-bottom:26px">
+  <div class="tilt rv"><div class="card"><div class="ic">📈</div><h3>Marketing Solutions</h3><p>These days, entrepreneurs are adopting various ways to enhance their business. Online marketing is one such way to attract customers.</p><ul><li>Digital / Online Marketing</li><li>Traditional / Offline Marketing</li></ul></div></div>
+  <div class="tilt rv"><div class="card"><div class="ic">💻</div><h3>IT Solutions</h3><p>We are a team of specialized, experienced software architects and developers working together to develop world class IT solutions.</p><ul><li>CMS Development</li><li>E-Commerce Development</li><li>Architectural and Civil</li></ul></div></div>
+ </div>
+ <div class="grid g3">
+  <div class="tilt rv"><div class="card"><div class="ic">🏷️</div><h3>All India Branding</h3><ul><li>Internal Signage</li><li>External Signage</li><li>Hoardings</li><li>Outdoor Branding</li></ul></div></div>
+  <div class="tilt rv"><div class="card"><div class="ic">🔍</div><h3>SEO Services</h3><p>Search engine optimization and marketing for Bangalore, India and Los Angeles businesses.</p></div></div>
+  <div class="tilt rv"><div class="card"><div class="ic">🎬</div><h3>Multimedia</h3><p>2D / 3D animation, Flash programming and print media design.</p></div></div>
+ </div>
+</section>
+
+<section id="portfolio">
+ <div class="eyebrow">Our work</div>
+ <h2>Our <span class="grad">portfolio</span></h2>
+ <div class="grid g3" id="pfg"></div>
+</section>
+
+<section id="testimonials">
+ <div style="text-align:center"><div class="eyebrow">Client speak</div><h2>Words of <span class="grad">appreciation</span></h2></div>
+ <div class="tw" id="tw"></div>
+ <div class="ctl"><button id="prev" aria-label="Previous">←</button><button id="next" aria-label="Next">→</button></div>
+</section>
+
+<section id="contact">
+ <div class="eyebrow">Quick contact</div>
+ <h2>Share your <span class="grad">contact details</span></h2>
+ <div class="grid g2" style="align-items:start">
+  <div class="card tilt-off" style="transform:none"><form id="f">
+   <input id="n" placeholder="Name *" required><input id="e" type="email" placeholder="Email *" required><input id="p" type="tel" placeholder="Phone *" required>
+   <select id="s"><option>Web Development</option><option>Digital Marketing/SEO</option><option>Printing</option></select>
+   <textarea id="m" rows="4" placeholder="Message *" required></textarea>
+   <button class="btn" type="submit">Send via WhatsApp</button>
+  </form></div>
+  <div class="card cinfo" style="transform:none">
+   <p><b>Head Office</b>Taarruni Design Solutions, No. 67/1-1, “PRAVARA”, H.B. Samaja Road, Basavanagudi, Bangalore – 560004</p>
+   <p><b>USA Office</b>Taarruni, C/o. Izen Ai Inc, 4556 Fernandez Street, Union City, CA 94587, USA</p>
+   <p><b>Phone</b><a href="tel:+918026561646">+91 80 26561646</a>, <a href="tel:+919880477344">+91 98804 77344</a></p>
+   <p><b>Email</b><a href="mailto:info@taarruni.com">info@taarruni.com</a></p>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="fg">
+  <div><div class="logo" style="margin-bottom:14px"><svg viewBox="0 0 40 40"><rect x="2" y="2" width="36" height="36" rx="10" fill="url(#lg)"/><path d="M10 12h20v4.5H22V30h-4.5V16.5H10z" fill="#fff"/></svg><span>taarruni<small>DESIGN SOLUTIONS</small></span></div><p>Taarruni Design Solutions (TDS) is a leading Multimedia, web solutions provider and SEM company in India. A one-stop web solution for web development orientations and Internet application development.</p></div>
+  <div><h4>Quick Links</h4><ul><li><a href="#home">Home</a></li><li><a href="https://taarruni.blogspot.com/">Blog</a></li><li><a href="#about">About Us</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#contact">Contact Us</a></li></ul></div>
+  <div><h4>Follow</h4><ul><li><a href="https://www.facebook.com/taarruni">Facebook</a></li><li><a href="https://twitter.com/taarruni">Twitter</a></li><li><a href="https://www.linkedin.com/company/taarruni-design-solutions/">LinkedIn</a></li><li><a href="https://api.whatsapp.com/send?phone=919880477344&text=Yes%20I%20am%20Interested">WhatsApp</a></li></ul></div>
+ </div>
+ <div class="copy">Copyright © 2025 Taarruni Design Solutions. All rights reserved.</div>
+</footer>
+<a class="wa" href="https://api.whatsapp.com/send?phone=919880477344&text=Yes%20I%20am%20Interested" aria-label="WhatsApp">💬</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const $=s=>document.querySelector(s);
+// data
+const clients="Boardwise,Ferns,Lapp,Artbandhu,Doosan,Graco,KPMG,HiKOKI,Acuity,Adarsh,Akka,Amartech,Aneri Arts,Ankur,Anvi,Ayurveda Sanctuary,Bhoomika,Blue Square,BSS,Corporate Leisure,Customkings,Datron,Dell,Dhyaan Foods,Diqutech,Disha,Docventures Pharma,Foodpath,Go Activ,GVK,Hamlin Harkins,Havells,Henkel,Idagunji,Indian Bank,Izen,Jana,Kern-Liebers,Laveena,Lincoln,Maangalya,Manifest,Mann,Mapei,MetLife".split(",");
+$("#trk").innerHTML=[...clients,...clients].map(c=>`<span>${c}</span>`).join("");
+const grads=["#8b5cf6,#22d3ee","#f472b6,#8b5cf6","#22d3ee,#10b981","#f59e0b,#f472b6","#6366f1,#22d3ee","#ec4899,#f59e0b","#14b8a6,#6366f1","#a855f7,#f43f5e","#0ea5e9,#8b5cf6"];
+const ics=["🖥️","🛒","📱","🎨","📊","🏢","🧩","🚀","🌐"];
+$("#pfg").innerHTML=grads.map((g,i)=>`<div class="tilt rv"><div class="pf" style="--g:linear-gradient(135deg,${g.split(",")[0]},${g.split(",")[1]})"><i>${ics[i]}</i><span>Project ${String(i+1).padStart(2,"0")}</span></div></div>`).join("");
+const T=[
+["Donna Hamlin","Founder","I am a perpetual client and fan of TDS work. They designed and managed two websites for my companies which were well thought out, creative and practical. Hats off for TDS!!"],
+["Tracy Ann Curtis","Executive Coach","TDS was referred to me by a colleague who raved about their work. Vasant listened carefully to my requirements, and his team built my website economically, in a short time frame with minimal back and forth. I confidently recommend Taarruni for Website, Digital Marketing & SEO Services."],
+["Wren Solares","Creative Director","TDS is an excellent website designer company with a superb team to ensure that you see results when it matters. They are accountable, reliable and problem solvers at all levels."],
+["Vasudevan Murthy","Principal Consultant","Vasanth Yaji always works with a smile on his face. The designs he made were perfect and complete in all respects. A lovely person to work with, known for his cool & calm posture."],
+["Wilson John","Head Marketing","Highly recommended... I find the team very professional, creative, co-operative and time bound. All the best TDS team!"],
+["Abhijeet Prahlad","CEO","Excellent services! I have been working with the team at Taarruni for several years and always had a great and friendly experience. Detail oriented, professional and somebody you can count on."],
+["Sunil Kumar","Head Business Strategies","One of the best I've come across. I hired them for digital marketing services and honestly I will never look for others henceforth. Keep rocking guys!"],
+["Dr. Prashanth Jana","CEO","Top notch service from a thoroughly professional organization. Customer satisfaction seems to be the only motto. Anybody needing any kind of service in the digital world, approach Taarruni."]];
+$("#tw").innerHTML=T.map(t=>`<div class="tc"><div class="card" style="transform:none"><q>“${t[2]}”</q><div class="who"><div class="av">${t[0][0]}</div><div><b>${t[0]}</b><small>${t[1]}</small></div></div></div></div>`).join("");
+let cur=0;const tcs=[...document.querySelectorAll(".tc")];
+function pos(){const m=innerWidth<860?150:340;tcs.forEach((el,i)=>{let d=i-cur;if(d>T.length/2)d-=T.length;if(d<-T.length/2)d+=T.length;const a=Math.abs(d);el.style.transform=`translateX(${d*m}px) translateZ(${-a*160}px) rotateY(${-d*28}deg)`;el.style.opacity=a>2?0:1-a*.3;el.style.zIndex=10-a;el.style.pointerEvents=a?"none":"auto"})}
+const go=n=>{cur=(cur+n+T.length)%T.length;pos()};
+$("#prev").onclick=()=>go(-1);$("#next").onclick=()=>go(1);pos();addEventListener("resize",pos);
+let auto=setInterval(()=>go(1),6000);$("#tw").addEventListener("pointerdown",()=>clearInterval(auto));
+// nav
+$("#burger").onclick=()=>$("#menu").classList.toggle("open");
+document.querySelectorAll("#menu a").forEach(a=>a.onclick=()=>$("#menu").classList.remove("open"));
+// tilt
+document.querySelectorAll(".tilt").forEach(w=>{const c=w.firstElementChild;
+ w.addEventListener("pointermove",e=>{if(e.pointerType==="touch")return;const r=w.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;c.style.transform=`rotateY(${(x-.5)*18}deg) rotateX(${(.5-y)*18}deg) scale(1.03)`;c.style.setProperty("--mx",x*100+"%");c.style.setProperty("--my",y*100+"%")});
+ w.addEventListener("pointerleave",()=>c.style.transform="")});
+// reveal + counters
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;e.target.classList.add("in");e.target.querySelectorAll("[data-n]").forEach(c=>{const n=+c.dataset.n,s=c.dataset.s||"";let t0;const f=ts=>{t0=t0||ts;const p=Math.min((ts-t0)/1400,1);c.textContent=Math.round(n*p)+(p>=1?s:"");if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f)});io.unobserve(e.target)}),{threshold:.15});
+document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+// form -> WhatsApp
+$("#f").onsubmit=e=>{e.preventDefault();const t=`Name: ${$("#n").value}\nEmail: ${$("#e").value}\nPhone: ${$("#p").value}\nService: ${$("#s").value}\nMessage: ${$("#m").value}`;open("https://api.whatsapp.com/send?phone=919880477344&text="+encodeURIComponent(t),"_blank")};
+// 3D background
+try{
+ const cv=$("#bg"),R=new THREE.WebGLRenderer({canvas:cv,alpha:true,antialias:true});R.setPixelRatio(Math.min(devicePixelRatio,2));
+ const S=new THREE.Scene(),C=new THREE.PerspectiveCamera(60,1,.1,100);C.position.z=7;
+ const grp=new THREE.Group();S.add(grp);
+ const mk=(g,c)=>new THREE.Mesh(g,new THREE.MeshBasicMaterial({color:c,wireframe:true,transparent:true,opacity:.55}));
+ const ico=mk(new THREE.IcosahedronGeometry(2.1,1),0x8b5cf6),tor=mk(new THREE.TorusKnotGeometry(1.2,.32,100,12),0x22d3ee),ring=mk(new THREE.TorusGeometry(3.2,.02,8,100),0xf472b6);
+ ring.rotation.x=1.2;grp.add(ico,tor,ring);
+ const N=700,pa=new Float32Array(N*3);for(let i=0;i<N*3;i++)pa[i]=(Math.random()-.5)*28;
+ const pg=new THREE.BufferGeometry();pg.setAttribute("position",new THREE.BufferAttribute(pa,3));
+ const pts=new THREE.Points(pg,new THREE.PointsMaterial({color:0xffffff,size:.045,transparent:true,opacity:.7}));S.add(pts);
+ let mx=0,my=0,sy=0;addEventListener("pointermove",e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5});addEventListener("scroll",()=>sy=scrollY/innerHeight);
+ function rs(){R.setSize(innerWidth,innerHeight,false);C.aspect=innerWidth/innerHeight;C.updateProjectionMatrix();grp.position.x=innerWidth>860?2.6:0;grp.scale.setScalar(innerWidth>860?1:.7)}
+ rs();addEventListener("resize",rs);
+ const rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
+ (function loop(t){requestAnimationFrame(loop);t*=.001;if(!rm){ico.rotation.x=t*.2;ico.rotation.y=t*.3;tor.rotation.x=-t*.4;tor.rotation.y=t*.25;ring.rotation.z=t*.3;pts.rotation.y=t*.02}
+  grp.rotation.y+=(mx*1.2-grp.rotation.y)*.05;grp.rotation.x+=(my*.8-grp.rotation.x)*.05;grp.position.y=Math.sin(t)*.2+sy*2.2;C.position.z=7+sy*1.2;R.render(S,C)})(0)
+}catch(err){console.warn("WebGL unavailable",err)}
+</script>
+</body>
+</html>
